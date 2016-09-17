@@ -3773,3 +3773,11 @@ hr.invis {
   margin-top: 0;
   vertical-align: top;
 }
+
+.shicon {
+  background: url(../images/shicon.png) no-repeat 0 0;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
