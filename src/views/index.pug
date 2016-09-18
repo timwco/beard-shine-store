@@ -1,0 +1,74 @@
+extends partials/layout.pug
+
+block content
+  section.section.white.nopadtop
+    .container
+      .row
+        .col-md-12
+          img(src='assets/images/hero.jpg')
+      hr.invis
+      .row
+        .col-md-4
+          .service-box
+            i.shicon
+            h4 HAND MADE
+            p
+              | Each formula has been hand crafted based on different life experiences. Each bottle is then hand poured.
+        .col-md-4
+          .service-box
+            i.shicon
+            h4 QUALITY INGREDIENTS
+            p
+              | We source all of our base and essential oils from the best sources, so you can be sure they will work.
+        .col-md-4
+          .service-box
+            i.shicon
+            h4 UNBEATABLE PRICE
+            p
+              | Your beard takes a lot of work and we want to help by keeping our prices as low as we possibly can.
+      hr.invis
+      .col-md-12
+        .shop-item.col-md-3
+          .entry
+            a(href='shop-single-1.html', title='')
+              img(src='assets/images/products/prod-1.png', alt='')
+            .shop-item-title.text-center.clearfix
+              h4
+                a(href='shop-single-1.html') Morning Coffee
+              .shopmeta.clearfix
+                span $12
+                |  
+                button.snipcart-add-item.btn.btn-white(data-item-id='1', data-item-name='Beard Oil', data-item-price='12.00', data-item-url='/products/1', data-item-image='assets/images/products/prod-1.png', data-item-description='Morning Coffee')  Purchase
+        .shop-item.col-md-3
+          .entry
+            a(href='shop-single-1.html', title='')
+              img(src='assets/images/products/prod-2.png', alt='')
+            .shop-item-title.text-center.clearfix
+              h4
+                a(href='shop-single-1.html') Southern Tobacco
+              .shopmeta.clearfix
+                span $12
+                |  
+                button.snipcart-add-item.btn.btn-white(data-item-id='2', data-item-name='Beard Oil', data-item-price='12.00', data-item-url='/products/2', data-item-image='assets/images/products/prod-2.png', data-item-description='Southern Tobacco')  Purchase
+        .shop-item.col-md-3
+          .entry
+            a(href='shop-single-1.html', title='')
+              img(src='assets/images/products/prod-3.png', alt='')
+            .shop-item-title.text-center.clearfix
+              h4
+                a(href='shop-single-1.html') Ol Pejeta
+              .shopmeta.clearfix
+                span $12
+                |  
+                button.snipcart-add-item.btn.btn-white(data-item-id='3', data-item-name='Beard Oil', data-item-price='12.00', data-item-url='/products/3', data-item-image='assets/images/products/prod-3.png', data-item-description='Ol Pejeta')  Purchase
+        .shop-item.col-md-3
+          .entry
+            a.hover-image(href='shop-single-1.html', title='')
+              img(src='assets/images/products/prod-4.png', alt='')
+            .shop-item-title.text-center.clearfix
+              h4
+                a(href='shop-single-1.html') Citrus Mint
+              .shopmeta.clearfix
+                span $12
+                |  
+                button.snipcart-add-item.btn.btn-white(data-item-id='4', data-item-name='Beard Oil', data-item-price='12.00', data-item-url='/products/4', data-item-image='assets/images/products/prod-4.png', data-item-description='Citrus Mint')  Purchase
