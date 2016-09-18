@@ -16,7 +16,7 @@ html
               .navbar-table
                 .navbar-cell
                   .navbar-header
-                    a.navbar-brand(href='index.html')
+                    a.navbar-brand(href='/')
                       img.icon-mark(src='../assets/images/icon.png', alt='Beard Shine')
                     div
                       button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-2')
@@ -27,15 +27,6 @@ html
                     .navbar-cell
                       ul.nav.navbar-nav.navbar-right
                         include top-nav.pug
-      section.section.banner(style="background-image:url('upload/about_page.jpg');", data-img-width='1920', data-img-height='644', data-diff='100')
-        .container
-          .page-header.text-center
-            h1 About Shopme
-            .bread
-              ol.breadcrumb
-                li
-                  a(href='#') Home
-                li.active About us
       block content
       section
         .atl

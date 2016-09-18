@@ -8634,6 +8634,9 @@ body.comingsoon {
   border: 1px solid #e5e5e5;
   padding: 50px 30px; }
 
+.about-section {
+  padding: 100px 50px; }
+
 .about-box p,
 .service-box p {
   padding: 0; }
