@@ -1,0 +1,22 @@
+div.inner-wrapper
+  header.header
+    .container
+      nav.navbar.navbar-default.yamm
+        .container-fluid
+          .navbar-table
+            .navbar-cell
+              .navbar-header
+                a.navbar-brand(href='/')
+                  img.icon-mark(src='assets/images/icon-xmas.png', alt='Beard Shine')
+                .open-menu
+                  button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-2')
+                    span.sr-only Toggle navigation
+                    span.fa.fa-bars
+        .container-menu
+          .navbar-table
+            .navbar-cell.stretch
+              #bs-example-navbar-collapse-2.collapse.navbar-collapse
+                .navbar-cell
+                  ul.nav.navbar-nav.navbar-center
+                    include top-nav.pug
+  div(ui-view='')
