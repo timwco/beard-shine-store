@@ -25,31 +25,11 @@ section.section.white.nopadtop
             | Your beard takes a lot of work and we want to help by keeping our prices as low as we possibly can.
     hr.invis
     .col-md-12
-      .shop-item.col-md-3
-        .entry
-          img(src='assets/images/base.png', alt='')
-          .shop-item-title.text-center.clearfix
-            h4 Morning Coffee
-            .shopmeta.clearfix(data-id='7773579664')
-              span $12
-      .shop-item.col-md-3
-        .entry
-          img(src='assets/images/base.png', alt='')
-          .shop-item-title.text-center.clearfix
-            h4 Southern Tobacco
-            .shopmeta.clearfix(data-id='7773657808')
-              span $12
-      .shop-item.col-md-3
-        .entry
-          img(src='assets/images/base.png', alt='')
-          .shop-item-title.text-center.clearfix
-            h4 Ol Pejeta
-            .shopmeta.clearfix(data-id='7773660496')
-              span $12
-      .shop-item.col-md-3
-        .entry
-          img(src='assets/images/multi.png', alt='')
-          .shop-item-title.text-center.clearfix
-            h4 Three Pack
-            .shopmeta.clearfix(data-id='7773662288')
-              span $30
+      .shop-item.col-md-3(ng-repeat='product in vm.products')
+        a(href='/#/product/{{ product.sku }}')
+          .entry
+            img(ng-src='assets/images/{{ product.image }}', alt='{{ product.name }}')
+            .shop-item-title.text-center.clearfix
+              h4 {{ product.name }}
+              .shopmeta.clearfix
+                span ${{ product.price }}

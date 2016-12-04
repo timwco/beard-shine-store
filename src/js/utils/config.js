@@ -9,7 +9,8 @@ function config ($urlRouterProvider, $stateProvider) {
   })
   .state('layout.home', {
     url: '/',
-    templateUrl: 'templates/pages/home.html'
+    templateUrl: 'templates/pages/home.html',
+    controller: 'HomeController as vm'
   })
 
   // Interior Pages

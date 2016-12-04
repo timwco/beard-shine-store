@@ -1,0 +1,30 @@
+[
+  {
+    "name":"Morning Coffee",
+    "price": "12",
+    "sku": "7773579664",
+    "description": "TBD",
+    "image": "products/single-product.png"
+  }, 
+  {
+    "name":"Southern Tobacco",
+    "price": "12",
+    "sku": "7773657808",
+    "description": "TBD",
+    "image": "products/single-product.png"
+  }, 
+  {
+    "name":"Ol Pejeta",
+    "price": "12",
+    "sku": "7773660496",
+    "description": "TBD",
+    "image": "products/single-product.png"
+  }, 
+  {
+    "name":"Three Pack",
+    "price": "30",
+    "sku": "7773662288",
+    "description": "TBD",
+    "image": "products/multi-product.png"
+  }
+]

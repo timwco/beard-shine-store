@@ -3,7 +3,7 @@ import angular from 'angular';
 import 'angular-ui-router';
 
 import { config } from './utils/config';
-import { MainController } from './controllers/main.controller';
+import { HomeController } from './controllers/home.controller';
 
 
 
@@ -13,7 +13,7 @@ import { MainController } from './controllers/main.controller';
 angular
   .module('app', ['ui.router'])
   .config(config)
-  .controller('MainController', MainController)
+  .controller('HomeController', HomeController)
 ;
 
 
