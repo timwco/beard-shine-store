@@ -1,15 +1,3 @@
-// Imports
-import angular from 'angular';
-
-
-
-// Registration
-angular.module('app', []);
-
-
-
-
-
 // Enable Shopify API
 const shopClient = ShopifyBuy.buildClient({
   apiKey: 'c27b41e89448aa9747d3a89862ab6be4',
