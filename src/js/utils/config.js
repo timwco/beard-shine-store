@@ -31,6 +31,13 @@ function config ($urlRouterProvider, $stateProvider) {
     templateUrl: 'templates/pages/faq.html'
   })
 
+  // Product Pages
+  .state('inner.single', {
+    url: '/product/:id',
+    templateUrl: 'templates/products/single.html',
+    controller: 'ProductController as vm'
+  })
+
 
  $urlRouterProvider.otherwise('/');
 

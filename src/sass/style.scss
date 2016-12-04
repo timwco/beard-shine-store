@@ -3784,3 +3784,7 @@ hr.invis {
   height: 25px;
   display: inline-block;
 }
+
+.darkborder {
+  border-top: 5px solid $dark;
+}

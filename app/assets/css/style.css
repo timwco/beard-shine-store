@@ -10262,4 +10262,7 @@ hr.invis {
   height: 25px;
   display: inline-block; }
 
+.darkborder {
+  border-top: 5px solid #413f3c; }
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,20 @@
+section.section.white.darkborder
+  .container
+    .row
+      #rightside.col-md-12.col-sm-12
+        #single-shop.row
+          .col-md-4
+            .shop-images
+              img(ng-src='assets/images/{{ vm.product.image }}')
+          .col-md-8
+            .shop-top-title
+              h4 {{ vm.product.name }}
+              |  
+              small {{ vm.tagline }}
+              |  
+              strong ${{ vm.product.price }}
+            p 
+              | {{ vm.product.description }}
+            .add-cart-button.clearfix
+              a.btn.btn-white(href='{{ vm.atcURL }}', title='add to cart') Add to Cart
+        hr.invis
