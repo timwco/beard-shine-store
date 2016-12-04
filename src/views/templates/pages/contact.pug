@@ -1,0 +1,21 @@
+section.section.banner(style="background-image:url('assets/images/inner-pages.jpg');", data-img-width='1920', data-img-height='644', data-diff='100')
+  .container
+    .page-header.text-center
+      h1 Drop Us A Line
+.container-fluid
+  .row
+    .col-md-12.col-sm-12.col-xs-12.nopad
+      .about-height
+        .contact_form.comment-form-wrap.wow.fadeIn(style='visibility: visible;')
+          #message
+          form#contactform.row(action='contact.php', name='contactform', method='post')
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              input#name.form-control(type='text', name='name', placeholder='Name')
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              input#email.form-control(type='text', name='email', placeholder='Email')
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              textarea#comments.form-control(name='comments', rows='6', placeholder='Message...')
+              .pull-left
+                p * Note: Your email will be kept safe and sound
+              .pull-right
+                button#submit.btn.btn-white(type='submit', value='SEND')  SEND MAIL
