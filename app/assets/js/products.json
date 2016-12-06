@@ -1,13 +1,13 @@
 [
   {
-    "name":"Morning Coffee",
+    "name":"Americano",
     "price": "12",
     "sku": "7773579664",
     "description": "TBD",
     "image": "products/single-product.png"
   }, 
   {
-    "name":"Southern Tobacco",
+    "name":"Northwoods",
     "price": "12",
     "sku": "7773657808",
     "description": "TBD",
