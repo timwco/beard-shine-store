@@ -11,14 +11,13 @@ function ProductController ($stateParams, $http, ShopifyService, $scope) {
   init();
 
   function init () {
-    $http.get('assets/js/products.json').then( res => {
-      vm.products = res.data;
-      vm.product = _.find(vm.products, { sku: pid })
-    });
 
-    ShopifyService.fetchProduct(pid).then( res => {
-      vm.atcURL = ShopifyService.atcButton(res);
-      $scope.$apply();
+    ShopifyService.fetchProduct(pid).then( product => {
+      $http.get('assets/js/products.json').then( res => {
+        vm.products = res.data;
+        vm.product = _.find(vm.products, { sku: pid })
+        vm.atcURL = ShopifyService.atcButton(product);
+      });
     });
 
   }

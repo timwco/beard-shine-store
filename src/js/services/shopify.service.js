@@ -9,6 +9,7 @@ function ShopifyService () {
 
   this.fetchProduct = fetchProduct;
   this.atcButton    = atcButton;
+  this.createCart   = createCart;
 
   function fetchProduct(id) {
     return shopClient.fetchProduct(id);
@@ -17,6 +18,14 @@ function ShopifyService () {
   function atcButton (product) {
     let variant = product.variants[0];
     return variant.checkoutUrl(1);
+  }
+
+  function createCart () {
+    return shopClient.createCart();
+  }
+
+  function setCart(cart) {
+    shopCart.cart = cart;
   }
 
 }
