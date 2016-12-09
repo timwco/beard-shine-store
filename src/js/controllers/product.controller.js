@@ -8,10 +8,7 @@ function ProductController ($stateParams, $http, ShopifyService, $scope) {
   vm.tagline    = 'Organic Beard Oil';
   vm.addToCart  = addToCart;
   vm.changeQty  = changeQty;
-  vm.prodObj    = {
-    product: {},
-    qty: 1
-  };
+  vm.prodObj    = { variant: 0, quantity: 1 };
 
   init()
 
@@ -22,24 +19,28 @@ function ProductController ($stateParams, $http, ShopifyService, $scope) {
         vm.products = res.data;
         vm.product = _.find(vm.products, { sku: pid });
         vm.atcURL = ShopifyService.atcButton(product);
-        vm.prodObj.product = product;
+        vm.prodObj.variant = product.variants[0].id;
       });
     });
 
   }
 
   function changeQty (how) {
-    vm.prodObj.qty = (how === 'up') ? vm.prodObj.qty + 1 : vm.prodObj.qty - 1;
+    vm.prodObj.quantity = (how === 'up') ? vm.prodObj.quantity + 1 : vm.prodObj.quantity - 1;
     // Can't dip below 1 :)
-    if (vm.prodObj.qty === 0) {
-      vm.prodObj.qty = 1;
+    if (vm.prodObj.quantity === 0) {
+      vm.prodObj.quantity = 1;
     }
   }
 
   function addToCart () {
-    
+     ShopifyService.getCart().then( cart => {
+       console.log(vm.prodObj);
+       cart.createLineItemsFromVariants(vm.prodObj).then( x => {
+          console.log(x);
+        });
+     });
   }
-
 }
 
 ProductController.$inject = ['$stateParams', '$http', 'ShopifyService', '$scope'];

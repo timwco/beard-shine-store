@@ -24,8 +24,8 @@ section.section.white.darkborder
                 small QTY
                 .wan-spinner.wan-spinner-2(style='border-color: rgb(44, 62, 80);')
                   span.minus(ng-click='vm.changeQty("down")') -
-                  input(type='text', style='width: 40px;' ng-model='vm.prodObj.qty')
+                  input(type='text', style='width: 40px;' ng-model='vm.prodObj.quantity')
                   span.plus(ng-click='vm.changeQty("up")') +
               .add-cart-button.clearfix
-                a.btn.btn-white(href='{{ vm.atcURL }}', title='add to cart') Add to Cart
+                button.btn.btn-white Add to Cart
         hr.invis

@@ -13,7 +13,7 @@ function ShopifyService ($cookies) {
 
   // Cart
   this.createCart   = createCart;
-  this.addToCart    = addToCart;
+  this.getCart      = getCart;
 
 
   function fetchProduct(id) {
@@ -29,14 +29,9 @@ function ShopifyService ($cookies) {
     return shopClient.createCart();
   }
 
-  function addToCart() {
+  function getCart() {
     let cartId = $cookies.get('shine_cart');
-
-    shopClient.fetchCart(cartId).then( cart => {
-
-    });
-
-
+    return shopClient.fetchCart(cartId);
   }
 
 
