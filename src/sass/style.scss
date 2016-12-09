@@ -3788,3 +3788,9 @@ hr.invis {
 .darkborder {
   border-top: 5px solid $dark;
 }
+
+.countbadge {
+  background-color: $light;
+  color: $dark;
+  line-height: 19px;
+}

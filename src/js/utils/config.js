@@ -5,7 +5,8 @@ function config ($urlRouterProvider, $stateProvider) {
   // Home Page
   .state('layout', {
     abstract: true,
-    templateUrl: 'templates/layouts/layout.html'
+    templateUrl: 'templates/layouts/layout.html',
+    controller: 'LayoutController as vm'
   })
   .state('layout.home', {
     url: '/',
@@ -17,6 +18,7 @@ function config ($urlRouterProvider, $stateProvider) {
   .state('inner', {
     abstract: true,
     templateUrl: 'templates/layouts/layout-inner.html',
+    controller: 'LayoutController as vm'
   })
   .state('inner.about', {
     url: '/about',

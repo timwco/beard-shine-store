@@ -10265,4 +10265,9 @@ hr.invis {
 .darkborder {
   border-top: 5px solid #413f3c; }
 
+.countbadge {
+  background-color: #d2ccb5;
+  color: #413f3c;
+  line-height: 19px; }
+
 /*# sourceMappingURL=style.css.map */
