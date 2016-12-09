@@ -1,4 +1,4 @@
-function ShopifyService () {
+function ShopifyService ($cookies) {
 
   // Enable Shopify API
   const shopClient = ShopifyBuy.buildClient({
@@ -7,9 +7,14 @@ function ShopifyService () {
     appId: '6'
   });
 
+  // Products
   this.fetchProduct = fetchProduct;
   this.atcButton    = atcButton;
+
+  // Cart
   this.createCart   = createCart;
+  this.addToCart    = addToCart;
+
 
   function fetchProduct(id) {
     return shopClient.fetchProduct(id);
@@ -24,11 +29,19 @@ function ShopifyService () {
     return shopClient.createCart();
   }
 
-  function setCart(cart) {
-    shopCart.cart = cart;
+  function addToCart() {
+    let cartId = $cookies.get('shine_cart');
+
+    shopClient.fetchCart(cartId).then( cart => {
+
+    });
+
+
   }
+
+
 
 }
 
-ShopifyService.$inject = [];
+ShopifyService.$inject = ['$cookies'];
 export { ShopifyService };

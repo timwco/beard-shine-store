@@ -19,6 +19,13 @@ section.section.white.darkborder
               strong ${{ vm.product.price }}
             p 
               | {{ vm.product.description }}
-            .add-cart-button.clearfix
-              a.btn.btn-white(href='{{ vm.atcURL }}', title='add to cart') Add to Cart
+            form(ng-submit='vm.addToCart()')
+              .select-qty.clearfix
+                small QTY
+                .wan-spinner.wan-spinner-2(style='border-color: rgb(44, 62, 80);')
+                  span.minus(ng-click='vm.changeQty("down")') -
+                  input(type='text', style='width: 40px;' ng-model='vm.prodObj.qty')
+                  span.plus(ng-click='vm.changeQty("up")') +
+              .add-cart-button.clearfix
+                a.btn.btn-white(href='{{ vm.atcURL }}', title='add to cart') Add to Cart
         hr.invis
