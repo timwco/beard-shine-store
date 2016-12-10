@@ -5,7 +5,7 @@
     .col-md-3
       .msidebar.infobox
         h4 100% ORGANIC
-        p Made from the best ingredients
+        p Made from the good stuff
       .msidebar.infobox
         h4 FREE SHIPPING
         p Free shipping on orders over $50
@@ -13,18 +13,17 @@
         .widget-title
           h4 Stay In The Know
         form(method='post')
-          input.form-control(type='text', name='username', placeholder='Username')
           input.form-control(type='email', name='username', placeholder='Email Address')
           button.btn.btn-block.btn-primary.btn-sm(type='submit') Subscribe
   hr.invis
   .row
     .col-md-12
       .shop-item.col-md-3(ng-repeat='product in vm.products')
-        a(href='/#/product/{{ product.sku }}')
+        a(href='/#/product/{{ product.id }}')
           .entry
-            img(ng-src='assets/images/{{ product.image }}', alt='{{ product.name }}')
+            img(ng-src='{{ product.images[0].src }}', alt='{{ product.title }}')
             .shop-item-title.text-center.clearfix
-              h4 {{ product.name }}
+              h4 {{ product.title }}
               .shopmeta.clearfix
-                span ${{ product.price }}
+                span ${{ product.variants[0].price }}
   hr.invis

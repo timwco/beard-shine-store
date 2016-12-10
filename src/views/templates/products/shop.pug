@@ -1,0 +1,21 @@
+section.section.banner(style="background-image:url('../assets/images/inner-pages.jpg');", data-img-width='1920', data-img-height='644', data-diff='100')
+  .container
+    .page-header.text-center
+      h1 Beard Shine Products
+      .bread
+        ol.breadcrumb
+          li
+            a(href='/#/') Home
+          li.active Shop
+section.section.white.darkborder
+  .container
+    .row
+      .col-md-12
+        .shop-item.col-md-3(ng-repeat='product in vm.products')
+          a(href='/#/product/{{ product.id }}')
+            .entry
+              img(ng-src='{{ product.images[0].src }}', alt='{{ product.title }}')
+              .shop-item-title.text-center.clearfix
+                h4 {{ product.title }}
+                .shopmeta.clearfix
+                  span ${{ product.variants[0].price }}

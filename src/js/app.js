@@ -7,8 +7,8 @@ import { config } from './utils/config';
 import { run } from './utils/run';
 
 import { LayoutController } from './controllers/layout.controller';
-import { HomeController } from './controllers/home.controller';
 import { ProductController } from './controllers/product.controller';
+import { ShopController } from './controllers/shop.controller';
 import { CartController } from './controllers/cart.controller';
 
 import { ShopifyService } from './services/shopify.service';
@@ -19,8 +19,8 @@ angular
   .config(config)
   .run(run)
   .controller('LayoutController', LayoutController)
-  .controller('HomeController', HomeController)
   .controller('ProductController', ProductController)
+  .controller('ShopController', ShopController)
   .controller('CartController', CartController)
   .service('ShopifyService', ShopifyService)
 ;

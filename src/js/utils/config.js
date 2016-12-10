@@ -11,7 +11,7 @@ function config ($urlRouterProvider, $stateProvider) {
     .state('layout.home', {
     url: '/',
     templateUrl: 'templates/pages/home.html',
-    controller: 'HomeController as vm'
+    controller: 'ShopController as vm'
   })
 
   // Interior Pages
@@ -19,16 +19,17 @@ function config ($urlRouterProvider, $stateProvider) {
     url: '/about',
     templateUrl: 'templates/pages/about.html'
   })
-  .state('layout.contact', {
-    url: '/contact',
-    templateUrl: 'templates/pages/contact.html'
-  })
   .state('layout.faq', {
     url: '/faq',
     templateUrl: 'templates/pages/faq.html'
   })
 
   // Product Pages
+  .state('layout.shop', {
+    url: '/shop',
+    templateUrl: 'templates/products/shop.html',
+    controller: 'ShopController as vm'
+  })
   .state('layout.single', {
     url: '/product/:id',
     templateUrl: 'templates/products/single.html',

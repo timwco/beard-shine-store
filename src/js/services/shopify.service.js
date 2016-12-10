@@ -8,13 +8,18 @@ function ShopifyService ($cookies) {
   });
 
   // Products
-  this.fetchProduct = fetchProduct;
-  this.atcButton    = atcButton;
+  this.fetchAllProducts  = fetchAllProducts;
+  this.fetchProduct      = fetchProduct;
+  this.atcButton         = atcButton;
 
   // Cart
-  this.createCart   = createCart;
-  this.getCart      = getCart;
+  this.createCart     = createCart;
+  this.getCart        = getCart;
 
+
+  function fetchAllProducts() {
+    return shopClient.fetchAllProducts();
+  }
 
   function fetchProduct(id) {
     return shopClient.fetchProduct(id);

@@ -1,7 +1,12 @@
 section.section.banner(style="background-image:url('../assets/images/inner-pages.jpg');", data-img-width='1920', data-img-height='644', data-diff='100')
   .container
     .page-header.text-center
-      h1 Shop Beard Shine
+      h1 Beard Oil
+      .bread
+        ol.breadcrumb
+          li
+            a(href='/#/') Home
+          li.active Product
 section.section.white.darkborder
   .container
     .row
@@ -9,14 +14,14 @@ section.section.white.darkborder
         #single-shop.row
           .col-md-4
             .shop-images
-              img(ng-src='assets/images/{{ vm.product.image }}')
+              img(ng-src='{{ vm.product.images[0].src }}')
           .col-md-8
             .shop-top-title
-              h4 {{ vm.product.name }}
+              h4 {{ vm.product.title }}
               |  
               small {{ vm.tagline }}
               |  
-              strong ${{ vm.product.price }}
+              strong ${{ vm.product.variants[0].price }}
             p 
               | {{ vm.product.description }}
             form(ng-submit='vm.addToCart()')

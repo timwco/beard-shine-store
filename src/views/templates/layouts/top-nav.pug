@@ -2,12 +2,12 @@
 li
   a(href='/#/') Home
 li
-  a(href='/#/about') About
+  a(href='/#/shop') Shop
 li
-  a(href='/#/contact') Contact
+  a(href='/#/about') About
 li
   a(href='/#/faq') FAQ
 li.shopcartmenu
   a(href='/#/cart')
     small Cart 
-    span.countbadge {{ vm.cartQty }}
+    span.countbadge(ng-show='vm.cartQty') {{ vm.cartQty }}

@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 function ProductController ($stateParams, $http, ShopifyService, $scope, $state) {
 
   const vm = this;
@@ -15,12 +13,10 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state)
   function init () {
 
     ShopifyService.fetchProduct(pid).then( product => {
-      $http.get('assets/js/products.json').then( res => {
-        vm.products = res.data;
-        vm.product = _.find(vm.products, { sku: pid });
-        vm.atcURL = ShopifyService.atcButton(product);
-        vm.prodObj.variant = product.variants[0];
-      });
+      vm.product = product;
+      vm.atcURL = ShopifyService.atcButton(product);
+      vm.prodObj.variant = product.variants[0];
+      $scope.$apply(); // Hate This!!
     });
 
   }
