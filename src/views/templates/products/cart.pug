@@ -16,7 +16,7 @@ section.section.white
                   div(ng-repeat='product in vm.products')
                     .form-group
                       .col-sm-3.col-xs-3
-                        img.img-responsive(alt='{{ product.title }}', src='{{ product.image.src }}')
+                        img.img-responsive(alt='{{ product.title }}', ng-src='{{ product.image.src }}')
                       .col-sm-6.col-xs-6
                         .col-xs-12
                           h4 {{ product.title }}

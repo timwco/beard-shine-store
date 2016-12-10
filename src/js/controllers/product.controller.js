@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-function ProductController ($stateParams, $http, ShopifyService, $scope) {
+function ProductController ($stateParams, $http, ShopifyService, $scope, $state) {
 
   const vm = this;
   const pid = $stateParams.id;
@@ -35,13 +35,12 @@ function ProductController ($stateParams, $http, ShopifyService, $scope) {
 
   function addToCart () {
      ShopifyService.getCart().then( cart => {
-       console.log(vm.prodObj);
        cart.createLineItemsFromVariants(vm.prodObj).then( x => {
-          console.log(x);
+          $state.go('layout.cart');
         });
      });
   }
 }
 
-ProductController.$inject = ['$stateParams', '$http', 'ShopifyService', '$scope'];
+ProductController.$inject = ['$stateParams', '$http', 'ShopifyService', '$scope', '$state'];
 export { ProductController };
