@@ -16,8 +16,8 @@ section.section.white
             .col-lg-12.col-md-12
               .panel.panel-info
                 .panel-heading
-                  | Review Order 
-                .panel-body
+                  | Your Shopping Cart 
+                .panel-body(ng-show='vm.products.length > 0')
                   div(ng-repeat='product in vm.products')
                     .form-group
                       .col-sm-3.col-xs-3
@@ -33,11 +33,22 @@ section.section.white
                         h6
                           span $
                           | {{ product.price }}
+                          br
+                          span(class='remove-item', ng-click='vm.removeItem(product.id)') Remove
                     .form-group
                       hr
                   .form-group.text-right
                     .col-xs-12
-                      strong
-                        a.btn.btn-white(href='#') CONTINUE SHOPPING
+                      strong Subtotal: ${{ vm.subtotal }}
+                  .form-group
+                      hr
+                  .form-group.text-right
+                    .col-xs-12
+                      strong(class='bump-right')
+                        a.btn.btn-white(href='/#/shop') CONTINUE SHOPPING
                       strong
                         a.btn.btn-white(href='#') GO TO CHECKOUT
+                .panel-body(ng-show='vm.products.length <= 0')
+                  p 
+                    | Sorry, there is nothing in your cart. 
+                    a(href='/#/shop', class='linked') Go add some!

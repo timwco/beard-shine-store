@@ -5,6 +5,8 @@ $light: #d3cdb4;
 $tan: #98947a;
 $black: #2b2b2b;
 
+$alert: #ee4000;
+
 /* ----------------------------------------------------
 	IMPORT FONTS
 ------------------------------------------------------- */
@@ -3795,4 +3797,18 @@ hr.invis {
 
 .btn-primary {
   background-color: $tan!important;
+}
+
+.remove-item {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 11px;
+  color: $alert;
+}
+a.linked {
+  text-decoration: underline !important;
+}
+
+.bump-right {
+  margin-right: 5px;
 }

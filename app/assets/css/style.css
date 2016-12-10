@@ -10270,4 +10270,16 @@ hr.invis {
 .btn-primary {
   background-color: #98947a !important; }
 
+.remove-item {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 11px;
+  color: #ee4000; }
+
+a.linked {
+  text-decoration: underline !important; }
+
+.bump-right {
+  margin-right: 5px; }
+
 /*# sourceMappingURL=style.css.map */
