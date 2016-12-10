@@ -40,6 +40,13 @@ function config ($urlRouterProvider, $stateProvider) {
     controller: 'ProductController as vm'
   })
 
+  // Cart Pages
+  .state('inner.cart', {
+    url: '/cart',
+    templateUrl: 'templates/products/cart.html',
+    controller: 'CartController as vm'
+  })
+
 
  $urlRouterProvider.otherwise('/');
 

@@ -1,0 +1,38 @@
+section.section.banner(style="background-image:url('../assets/images/inner-pages.jpg');", data-img-width='1920', data-img-height='644', data-diff='100')
+  .container
+    .page-header.text-center
+      h1 Shopping Cart
+section.section.white
+  .container
+    .row
+      #rightside.col-md-10.col-md-offset-1.col-sm-12
+        .row.cart-body
+          div.form-horizontal
+            .col-lg-12.col-md-12
+              .panel.panel-info
+                .panel-heading
+                  | Review Order 
+                .panel-body
+                  div(ng-repeat='product in vm.products')
+                    .form-group
+                      .col-sm-3.col-xs-3
+                        img.img-responsive(alt='{{ product.title }}', src='{{ product.image.src }}')
+                      .col-sm-6.col-xs-6
+                        .col-xs-12
+                          h4 {{ product.title }}
+                        .col-xs-12
+                          small
+                            | Quantity:
+                            span {{ product.quantity }}
+                      .col-sm-3.col-xs-3.text-right
+                        h6
+                          span $
+                          | {{ product.price }}
+                    .form-group
+                      hr
+                  .form-group.text-right
+                    .col-xs-12
+                      strong
+                        a.btn.btn-white(href='#') CONTINUE SHOPPING
+                      strong
+                        a.btn.btn-white(href='#') GO TO CHECKOUT

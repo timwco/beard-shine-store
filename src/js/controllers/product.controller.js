@@ -19,7 +19,7 @@ function ProductController ($stateParams, $http, ShopifyService, $scope) {
         vm.products = res.data;
         vm.product = _.find(vm.products, { sku: pid });
         vm.atcURL = ShopifyService.atcButton(product);
-        vm.prodObj.variant = product.variants[0].id;
+        vm.prodObj.variant = product.variants[0];
       });
     });
 

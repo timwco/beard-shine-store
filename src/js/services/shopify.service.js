@@ -20,12 +20,12 @@ function ShopifyService ($cookies) {
     return shopClient.fetchProduct(id);
   }
 
-  function atcButton (product) {
+  function atcButton(product) {
     let variant = product.variants[0];
     return variant.checkoutUrl(1);
   }
 
-  function createCart () {
+  function createCart() {
     return shopClient.createCart();
   }
 
