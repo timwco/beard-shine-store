@@ -8,40 +8,35 @@ function config ($urlRouterProvider, $stateProvider) {
     templateUrl: 'templates/layouts/layout.html',
     controller: 'LayoutController as vm'
   })
-  .state('layout.home', {
+    .state('layout.home', {
     url: '/',
     templateUrl: 'templates/pages/home.html',
     controller: 'HomeController as vm'
   })
 
   // Interior Pages
-  .state('inner', {
-    abstract: true,
-    templateUrl: 'templates/layouts/layout-inner.html',
-    controller: 'LayoutController as vm'
-  })
-  .state('inner.about', {
+  .state('layout.about', {
     url: '/about',
     templateUrl: 'templates/pages/about.html'
   })
-  .state('inner.contact', {
+  .state('layout.contact', {
     url: '/contact',
     templateUrl: 'templates/pages/contact.html'
   })
-  .state('inner.faq', {
+  .state('layout.faq', {
     url: '/faq',
     templateUrl: 'templates/pages/faq.html'
   })
 
   // Product Pages
-  .state('inner.single', {
+  .state('layout.single', {
     url: '/product/:id',
     templateUrl: 'templates/products/single.html',
     controller: 'ProductController as vm'
   })
 
   // Cart Pages
-  .state('inner.cart', {
+  .state('layout.cart', {
     url: '/cart',
     templateUrl: 'templates/products/cart.html',
     controller: 'CartController as vm'

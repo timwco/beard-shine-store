@@ -1,29 +1,23 @@
-section.section.white.nopadtop
-  .container
-    .row
-      .col-md-12
-        img(src='assets/images/hero.jpg')
-    hr.invis
-    .row
-      .col-md-4
-        .service-box
-          i.shicon
-          h4 HAND MADE
-          p
-            | Each formula has been hand crafted based on different life experiences. Each bottle is then hand poured.
-      .col-md-4
-        .service-box
-          i.shicon
-          h4 100% ORGANIC INGREDIENTS
-          p
-            | We source all of our base and essential oils from the best sources, so you can be sure they will work.
-      .col-md-4
-        .service-box
-          i.shicon
-          h4 UNBEATABLE PRICE
-          p
-            | Your beard takes a lot of work and we want to help by keeping our prices as low as we possibly can.
-    hr.invis
+.container
+  .row
+    .col-md-9
+      img(src='assets/images/hero.jpg')
+    .col-md-3
+      .msidebar.infobox
+        h4 100% ORGANIC
+        p The highest quality product
+      .msidebar.infobox
+        h4 FREE SHIPPING
+        p Free shipping on orders over $50
+      .msidebar.last-child.newsletterform
+        .widget-title
+          h4 Stay In The Know
+        form(method='post')
+          input.form-control(type='text', name='username', placeholder='Username')
+          input.form-control(type='email', name='username', placeholder='Email Address')
+          button.btn.btn-block.btn-primary.btn-sm(type='submit') Subscribe
+  hr.invis
+  .row
     .col-md-12
       .shop-item.col-md-3(ng-repeat='product in vm.products')
         a(href='/#/product/{{ product.sku }}')
@@ -33,3 +27,4 @@ section.section.white.nopadtop
               h4 {{ product.name }}
               .shopmeta.clearfix
                 span ${{ product.price }}
+  hr.invis
