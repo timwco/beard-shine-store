@@ -1,4 +1,4 @@
-function ProductController ($stateParams, $http, ShopifyService, $scope, $state) {
+function ProductController ($stateParams, $http, ShopifyService, $scope, $state, $sce) {
 
   const vm = this;
   const pid = $stateParams.id;
@@ -14,6 +14,7 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state)
 
     ShopifyService.fetchProduct(pid).then( product => {
       vm.product = product;
+      vm.description = $sce.trustAsHtml(product.description);
       vm.atcURL = ShopifyService.atcButton(product);
       vm.prodObj.variant = product.variants[0];
       $scope.$apply(); // Hate This!!
@@ -38,5 +39,5 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state)
   }
 }
 
-ProductController.$inject = ['$stateParams', '$http', 'ShopifyService', '$scope', '$state'];
+ProductController.$inject = ['$stateParams', '$http', 'ShopifyService', '$scope', '$state', '$sce'];
 export { ProductController };

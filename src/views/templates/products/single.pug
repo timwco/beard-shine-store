@@ -5,7 +5,7 @@ section.section.banner(style="background-image:url('../assets/images/inner-pages
       .bread
         ol.breadcrumb
           li
-            a(href='/#/') Home
+            a(href='/#!/') Home
           li.active Product
 section.section.white.darkborder
   .container
@@ -22,11 +22,10 @@ section.section.white.darkborder
               small {{ vm.tagline }}
               |  
               strong ${{ vm.product.variants[0].price }}
-            p 
-              | {{ vm.product.description }}
+            p(ng-bind-html='vm.description')
             form(ng-submit='vm.addToCart()')
               .select-qty.clearfix
-                small QTY
+                small Select Quantity
                 .wan-spinner.wan-spinner-2(style='border-color: rgb(44, 62, 80);')
                   span.minus(ng-click='vm.changeQty("down")') -
                   input(type='text', style='width: 40px;' ng-model='vm.prodObj.quantity')

@@ -15,10 +15,6 @@ function config ($urlRouterProvider, $stateProvider) {
   })
 
   // Interior Pages
-  .state('layout.about', {
-    url: '/about',
-    templateUrl: 'templates/pages/about.html'
-  })
   .state('layout.faq', {
     url: '/faq',
     templateUrl: 'templates/pages/faq.html'

@@ -8,7 +8,6 @@ function ShopController (ShopifyService, $scope) {
 
   function init() {
     ShopifyService.fetchAllProducts().then( products => {
-      console.log(products);
       vm.products = products.reverse();
       $scope.$apply(); // Hate This!!
     });

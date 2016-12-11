@@ -5,7 +5,7 @@ section.section.banner(style="background-image:url('../assets/images/inner-pages
       .bread
         ol.breadcrumb
           li
-            a(href='/#/') Home
+            a(href='/#!/') Home
           li.active Cart
 section.section.white
   .container
@@ -26,9 +26,9 @@ section.section.white
                         .col-xs-12
                           h4 {{ product.title }}
                         .col-xs-12
-                          small
-                            | Quantity:
-                            span {{ product.quantity }}
+                          h5
+                            | Quantity: 
+                            strong {{ product.quantity }}
                       .col-sm-3.col-xs-3.text-right
                         h6
                           span $
@@ -45,10 +45,10 @@ section.section.white
                   .form-group.text-right
                     .col-xs-12
                       strong(class='bump-right')
-                        a.btn.btn-white(href='/#/shop') CONTINUE SHOPPING
+                        a.btn.btn-white(href='/#!/shop') CONTINUE SHOPPING
                       strong
-                        a.btn.btn-white(href='#') GO TO CHECKOUT
+                        a.btn.btn-white.btn-chkout(href='{{ vm.checkoutUrl }}') GO TO CHECKOUT
                 .panel-body(ng-show='vm.products.length <= 0')
                   p 
                     | Sorry, there is nothing in your cart. 
-                    a(href='/#/shop', class='linked') Go add some!
+                    a(href='/#!/shop', class='linked') Go add some!

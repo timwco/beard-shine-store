@@ -10,6 +10,7 @@ function CartController (ShopifyService, $state) {
     ShopifyService.getCart().then( cart => {
       vm.products = cart.lineItems;
       vm.subtotal = cart.subtotal;
+      vm.checkoutUrl = cart.checkoutUrl;
     });
   }
 

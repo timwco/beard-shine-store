@@ -5,7 +5,7 @@ $light: #d3cdb4;
 $tan: #98947a;
 $black: #2b2b2b;
 
-$alert: #ee4000;
+$alert: #ff6c6a;
 
 /* ----------------------------------------------------
 	IMPORT FONTS
@@ -3795,8 +3795,13 @@ hr.invis {
   line-height: 19px;
 }
 
-.btn-primary {
+.btn-primary, .btn-chkout {
   background-color: $tan!important;
+  border: 1px solid $tan;
+  color: white;
+  &:hover {
+    color: white;
+  }
 }
 
 .remove-item {
@@ -3811,4 +3816,16 @@ a.linked {
 
 .bump-right {
   margin-right: 5px;
+}
+
+
+.question-box {
+  span { color: $tan; }
+  h4 {
+    font-size: 19px;
+    letter-spacing: 0;
+  }
+  .lead {
+    font-family: Georgia;
+  }
 }

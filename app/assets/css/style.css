@@ -10267,19 +10267,33 @@ hr.invis {
   color: #403f3b;
   line-height: 19px; }
 
-.btn-primary {
-  background-color: #98947a !important; }
+.btn-primary, .btn-chkout {
+  background-color: #98947a !important;
+  border: 1px solid #98947a;
+  color: white; }
+  .btn-primary:hover, .btn-chkout:hover {
+    color: white; }
 
 .remove-item {
   display: inline-block;
   cursor: pointer;
   font-size: 11px;
-  color: #ee4000; }
+  color: #ff6c6a; }
 
 a.linked {
   text-decoration: underline !important; }
 
 .bump-right {
   margin-right: 5px; }
+
+.question-box span {
+  color: #98947a; }
+
+.question-box h4 {
+  font-size: 19px;
+  letter-spacing: 0; }
+
+.question-box .lead {
+  font-family: Georgia; }
 
 /*# sourceMappingURL=style.css.map */

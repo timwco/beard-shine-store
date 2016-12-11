@@ -2,6 +2,7 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-cookies';
+import 'angular-animate';
 
 import { config } from './utils/config';
 import { run } from './utils/run';
@@ -15,7 +16,7 @@ import { ShopifyService } from './services/shopify.service';
 
 // Registration
 angular
-  .module('app', ['ui.router', 'ngCookies'])
+  .module('app', ['ui.router', 'ngCookies', 'ngAnimate'])
   .config(config)
   .run(run)
   .controller('LayoutController', LayoutController)

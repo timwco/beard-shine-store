@@ -5,14 +5,14 @@ section.section.banner(style="background-image:url('../assets/images/inner-pages
       .bread
         ol.breadcrumb
           li
-            a(href='/#/') Home
+            a(href='/#!/') Home
           li.active Shop
 section.section.white.darkborder
   .container
     .row
       .col-md-12
         .shop-item.col-md-3(ng-repeat='product in vm.products')
-          a(href='/#/product/{{ product.id }}')
+          a(href='/#!/product/{{ product.id }}')
             .entry
               img(ng-src='{{ product.images[0].src }}', alt='{{ product.title }}')
               .shop-item-title.text-center.clearfix
