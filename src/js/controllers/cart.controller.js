@@ -1,16 +1,18 @@
-function CartController (ShopifyService, $state) {
+function CartController (ShopifyService, $state, ngProgressLite) {
 
   let vm = this;
  
   vm.removeItem = removeItem;
 
   init();
+  ngProgressLite.start();
 
   function init() {
     ShopifyService.getCart().then( cart => {
       vm.products = cart.lineItems;
       vm.subtotal = cart.subtotal;
       vm.checkoutUrl = cart.checkoutUrl;
+      ngProgressLite.done();
     });
   }
 
@@ -24,5 +26,5 @@ function CartController (ShopifyService, $state) {
 
 }
 
-CartController.$inject = ['ShopifyService', '$state'];
+CartController.$inject = ['ShopifyService', '$state', 'ngProgressLite'];
 export { CartController };

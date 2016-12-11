@@ -2,7 +2,7 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-cookies';
-import 'angular-animate';
+import 'ngprogress-lite';
 
 import { config } from './utils/config';
 import { run } from './utils/run';
@@ -16,7 +16,7 @@ import { ShopifyService } from './services/shopify.service';
 
 // Registration
 angular
-  .module('app', ['ui.router', 'ngCookies', 'ngAnimate'])
+  .module('app', ['ui.router', 'ngCookies', 'ngProgressLite'])
   .config(config)
   .run(run)
   .controller('LayoutController', LayoutController)

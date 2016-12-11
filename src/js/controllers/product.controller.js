@@ -1,4 +1,4 @@
-function ProductController ($stateParams, $http, ShopifyService, $scope, $state, $sce) {
+function ProductController ($stateParams, $http, ShopifyService, $scope, $state, $sce, ngProgressLite) {
 
   const vm = this;
   const pid = $stateParams.id;
@@ -8,7 +8,8 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state,
   vm.changeQty  = changeQty;
   vm.prodObj    = { variant: 0, quantity: 1 };
 
-  init()
+  init();
+  ngProgressLite.start();
 
   function init () {
 
@@ -18,6 +19,7 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state,
       vm.atcURL = ShopifyService.atcButton(product);
       vm.prodObj.variant = product.variants[0];
       $scope.$apply(); // Hate This!!
+      ngProgressLite.done();
     });
 
   }
@@ -39,5 +41,5 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state,
   }
 }
 
-ProductController.$inject = ['$stateParams', '$http', 'ShopifyService', '$scope', '$state', '$sce'];
+ProductController.$inject = ['$stateParams', '$http', 'ShopifyService', '$scope', '$state', '$sce', 'ngProgressLite'];
 export { ProductController };

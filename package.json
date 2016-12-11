@@ -46,6 +46,7 @@
     "angular-cookies": "1.5.9",
     "angular-ui-router": "0.3.2",
     "bootstrap": "3.3.7",
+    "ngprogress-lite": "1.0.8",
     "normalize.css": "4.2.0"
   }
 }

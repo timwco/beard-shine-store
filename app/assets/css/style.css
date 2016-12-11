@@ -7133,6 +7133,29 @@ table td[class*=col-], table th[class*=col-] {
 .well-sm {
   padding: .8em; }
 
+.ngProgressLite {
+  pointer-events: none; }
+
+.ngProgressLiteBar {
+  background: #29d;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  height: 2px; }
+
+.ngProgressLite .ngProgressLiteBarShadow {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px); }
+
 /* ----------------------------------------------------
 	IMPORT FONTS
 ------------------------------------------------------- */
@@ -7167,7 +7190,6 @@ h6 {
   position: relative;
   padding: 0 0 10px 0;
   font-weight: normal;
-  letter-spacing: -0.7px;
   line-height: 1.8;
   color: #403f3b; }
 
@@ -7771,7 +7793,7 @@ a.social {
   .header-relative .navbar-header,
   .header-absolute .navbar-header {
     margin: 20px 0 20px !important;
-    width: 250px; } }
+    width: 300px; } }
 
 .yamm .nav,
 .yamm .collapse,
@@ -10295,5 +10317,9 @@ a.linked {
 
 .question-box .lead {
   font-family: Georgia; }
+
+.collapse {
+  display: block;
+  visibility: visible; }
 
 /*# sourceMappingURL=style.css.map */
