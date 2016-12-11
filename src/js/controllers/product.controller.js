@@ -3,7 +3,7 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state,
   const vm = this;
   const pid = $stateParams.id;
 
-  vm.tagline    = 'Organic Beard Oil';
+  vm.tagline    = '100% Organic Beard Oil';
   vm.addToCart  = addToCart;
   vm.changeQty  = changeQty;
   vm.prodObj    = { variant: 0, quantity: 1 };

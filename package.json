@@ -42,7 +42,6 @@
   },
   "dependencies": {
     "angular": "1.6.0",
-    "angular-animate": "1.6.0",
     "angular-cookies": "1.5.9",
     "angular-ui-router": "0.3.2",
     "bootstrap": "3.3.7",

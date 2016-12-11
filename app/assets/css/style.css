@@ -7427,7 +7427,7 @@ p.drop-caps.full:first-child::first-letter {
 
 .navbar-default .nav > li > a {
   color: #403f3b;
-  display: block;
+  display: inline;
   padding-top: 1.4em !important;
   font-family: 'Roboto', sans-serif;
   padding-bottom: 1.4em !important;
@@ -7435,7 +7435,8 @@ p.drop-caps.full:first-child::first-letter {
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  border: none; }
 
 .navbar-nav .has-submenu > ul li ul {
   top: -10px; }
@@ -7478,7 +7479,8 @@ p.drop-caps.full:first-child::first-letter {
   display: block; }
 
 .navbar-default .nav > li {
-  margin: 0; }
+  margin: 0;
+  display: inline-block; }
 
 .sidebar-header {
   text-align: center;
@@ -7656,10 +7658,10 @@ p.drop-caps.full:first-child::first-letter {
   line-height: 18px;
   padding: 0 4px;
   position: absolute;
-  right: -5px;
+  right: -15px;
   text-align: center;
   text-transform: none;
-  top: 2px;
+  top: 7px;
   width: 20px; }
 
 .topbar {
@@ -10321,5 +10323,9 @@ a.linked {
 .collapse {
   display: block;
   visibility: visible; }
+
+.navbar-cell ul.nav {
+  margin: 25px 0;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
