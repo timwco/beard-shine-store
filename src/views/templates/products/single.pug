@@ -18,11 +18,8 @@ section.section.white.darkborder
           .col-md-8
             .shop-top-title
               h4 {{ vm.product.title }}
-              |  
-              small {{ vm.tagline }}
-              |  
               strong ${{ vm.product.variants[0].price }}
-            p(ng-bind-html='vm.description')
+            p.content(ng-bind-html='vm.description')
             form(ng-submit='vm.addToCart()')
               .select-qty.clearfix
                 small Select Quantity
