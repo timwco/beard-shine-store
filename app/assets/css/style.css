@@ -7137,7 +7137,7 @@ table td[class*=col-], table th[class*=col-] {
   pointer-events: none; }
 
 .ngProgressLiteBar {
-  background: #29d;
+  background: #989479;
   position: fixed;
   z-index: 99999;
   top: 0;
@@ -7150,7 +7150,7 @@ table td[class*=col-], table th[class*=col-] {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  box-shadow: 0 0 10px #989479, 0 0 5px #989479;
   opacity: 1;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   -ms-transform: rotate(3deg) translate(0px, -4px);
@@ -10310,7 +10310,11 @@ a.linked {
 .bump-right {
   margin-right: 5px; }
 
+.faq {
+  padding: 15px 0 50px 0; }
+
 .question-box span {
+  font-family: 'Montserrat';
   color: #98947a; }
 
 .question-box h4 {
@@ -10318,7 +10322,8 @@ a.linked {
   letter-spacing: 0; }
 
 .question-box .lead {
-  font-family: Georgia; }
+  font-family: 'Roboto', sans-serif;
+  line-height: 28px; }
 
 .collapse {
   display: block;
@@ -10330,5 +10335,72 @@ a.linked {
 
 .content ul {
   margin-left: 40px; }
+
+.atcbtn {
+  background-color: #98947a;
+  color: white;
+  border: 1px solid #98947a; }
+
+.oostock {
+  cursor: default; }
+
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #989479;
+  background: -moz-linear-gradient(left, #989479 10%, rgba(152, 148, 121, 0) 42%);
+  background: -webkit-linear-gradient(left, #989479 10%, rgba(152, 148, 121, 0) 42%);
+  background: -o-linear-gradient(left, #989479 10%, rgba(152, 148, 121, 0) 42%);
+  background: -ms-linear-gradient(left, #989479 10%, rgba(152, 148, 121, 0) 42%);
+  background: linear-gradient(to right, #989479 10%, rgba(152, 148, 121, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0); }
+
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #989479;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: ''; }
+
+.loader:after {
+  background: #fcfcfc;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */

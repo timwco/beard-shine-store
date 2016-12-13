@@ -3,6 +3,7 @@ function CartController (ShopifyService, $state, ngProgressLite) {
   let vm = this;
  
   vm.removeItem = removeItem;
+  vm.loading    = true;
 
   init();
   ngProgressLite.start();
@@ -12,6 +13,7 @@ function CartController (ShopifyService, $state, ngProgressLite) {
       vm.products = cart.lineItems;
       vm.subtotal = cart.subtotal;
       vm.checkoutUrl = cart.checkoutUrl;
+      vm.loading = false; // Disable Loading
       ngProgressLite.done();
     });
   }

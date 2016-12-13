@@ -10,6 +10,7 @@ section.section.banner(style="background-image:url('../assets/images/inner-pages
 section.section.white
   .container
     .row
+      .loader(ng-show='vm.loading') Loading...
       #rightside.col-md-10.col-md-offset-1.col-sm-12
         .row.cart-body
           div.form-horizontal
@@ -50,5 +51,5 @@ section.section.white
                         a.btn.btn-white.btn-chkout(href='{{ vm.checkoutUrl }}') GO TO CHECKOUT
                 .panel-body(ng-show='vm.products.length <= 0')
                   p 
-                    | Sorry, there is nothing in your cart. 
-                    a(href='/#!/shop', class='linked') Go add some!
+                    | Oops, there's nothing in your cart. 
+                    a(href='/#!/shop', class='linked') Go add something!

@@ -10,7 +10,8 @@ section.section.banner(style="background-image:url('../assets/images/inner-pages
 section.section.white.darkborder
   .container
     .row
-      #rightside.col-md-12.col-sm-12
+      .loader(ng-show='vm.loading') Loading...
+      #rightside.col-md-12.col-sm-12(ng-hide='vm.loading')
         #single-shop.row
           .col-md-4
             .shop-images
@@ -20,7 +21,7 @@ section.section.white.darkborder
               h4 {{ vm.product.title }}
               strong ${{ vm.product.variants[0].price }}
             p.content(ng-bind-html='vm.description')
-            form(ng-submit='vm.addToCart()')
+            form(ng-submit='vm.addToCart()', ng-show='vm.instock')
               .select-qty.clearfix
                 small Select Quantity
                 .wan-spinner.wan-spinner-2(style='border-color: rgb(44, 62, 80);')
@@ -28,5 +29,6 @@ section.section.white.darkborder
                   input(type='text', style='width: 40px;' ng-model='vm.prodObj.quantity')
                   span.plus(ng-click='vm.changeQty("up")') +
               .add-cart-button.clearfix
-                button.btn.btn-white Add to Cart
+                button.btn.atcbtn Add to Cart
+            button.btn.btn-white.oostock(ng-hide='vm.instock') Out of Stock
         hr.invis

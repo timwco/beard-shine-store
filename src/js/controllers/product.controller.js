@@ -7,6 +7,7 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state,
   vm.addToCart  = addToCart;
   vm.changeQty  = changeQty;
   vm.prodObj    = { variant: 0, quantity: 1 };
+  vm.loading    = true;
 
   init();
   ngProgressLite.start();
@@ -15,9 +16,12 @@ function ProductController ($stateParams, $http, ShopifyService, $scope, $state,
 
     ShopifyService.fetchProduct(pid).then( product => {
       vm.product = product;
+      vm.instock = product.variants[0].available;
+      console.log(vm.instock);
       vm.description = $sce.trustAsHtml(product.description);
       vm.atcURL = ShopifyService.atcButton(product);
       vm.prodObj.variant = product.variants[0];
+      vm.loading = false; // Disable Loading
       $scope.$apply(); // Hate This!!
       ngProgressLite.done();
     });

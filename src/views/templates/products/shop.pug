@@ -11,6 +11,7 @@ section.section.white.darkborder
   .container
     .row
       .col-md-12
+        .loader(ng-show='vm.loading') Loading...
         .shop-item.col-md-3(ng-repeat='product in vm.products')
           a(href='/#!/product/{{ product.id }}')
             .entry
