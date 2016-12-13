@@ -1,4 +1,4 @@
-function config ($urlRouterProvider, $stateProvider) {
+function config ($urlRouterProvider, $stateProvider, $locationProvider) {
 
  $stateProvider
 
@@ -42,7 +42,12 @@ function config ($urlRouterProvider, $stateProvider) {
 
  $urlRouterProvider.otherwise('/');
 
+  // Use HTML5 Mode if not on localhost
+  if (window.location.href.indexOf("localhost") < 0) {
+    $locationProvider.html5Mode(true);
+  }
+
 }
 
-config.$inject = ['$urlRouterProvider', '$stateProvider'];
+config.$inject = ['$urlRouterProvider', '$stateProvider', '$locationProvider'];
 export { config };
