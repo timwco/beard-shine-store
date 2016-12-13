@@ -8672,7 +8672,8 @@ body.comingsoon {
   text-decoration: underline !important; }
 
 .question-box {
-  padding: 20px; }
+  padding: 20px;
+  min-height: 200px; }
 
 .question-box p {
   font-size: 14px; }
