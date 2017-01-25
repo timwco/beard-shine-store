@@ -10404,4 +10404,11 @@ a.linked {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
+blockquote {
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 15px 0 0 20px;
+  border-left: 3px solid #98947a;
+  font-family: 'Roboto', sans-serif; }
+
 /*# sourceMappingURL=style.css.map */
